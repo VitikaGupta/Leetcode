@@ -1,16 +1,18 @@
-class Solution(object):
-    def getSum(self, a, b):
-        
-        mask = 0xFFFFFFFF
-        max_int = 0x7FFFFFFF
-
-        while b != 0:
-            carry = (a & b) << 1
-            a = (a ^ b) & mask
-            b = carry & mask
-
-        if a <= max_int:
-            return a
+class Solution:
+    def checkDivisibility(self, n: int) -> bool:
+        num=n
+        sum=0
+        pro=1
+        while n>0:
+            digit=n%10
+            sum=sum+digit
+            pro=pro*digit
+            n//=10
+        total=sum+pro
+        if num%total==0:
+            return True
         else:
-            return ~(a ^ mask)
+            return False        
+
+
         
