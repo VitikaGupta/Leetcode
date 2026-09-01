@@ -1,11 +1,14 @@
 class Solution:
-    def numIdenticalPairs(self, nums: List[int]) -> int:
-        count = 0
-        for i in range(len(nums)):
-            for j in range(1,len(nums)):
-                if nums[i]==nums[j] and i<j:
-                    count+=1
-        return count            
+    def subtractProductAndSum(self, n: int) -> int:
+        di=0
+        sum=0
+        pro=1
+        while n>0:
+            digit=n%10
+            sum+=digit
+            pro=pro*digit
+            n//=10
 
+        di=pro-sum
+        return di
 
-        
