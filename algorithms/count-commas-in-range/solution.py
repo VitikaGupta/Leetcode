@@ -1,8 +1,8 @@
 class Solution:
-    def countBits(self, n):
-        ans = [0] * (n + 1)
+    def countCommas(self, n: int) -> int:
+        if n<=999:
+            return 0
+        else:
+            return n-999   
 
-        for i in range(1, n + 1):
-            ans[i] = ans[i // 2] + (i % 2)
-
-        return ans
+        
