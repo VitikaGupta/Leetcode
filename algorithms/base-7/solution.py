@@ -1,17 +1,21 @@
 class Solution:
-    def countCommas(self, n: int) -> int:
-        count=0
-        if n>=1000:
-            count+=min(n,999999)-1000+1
-        if n>=1000000:
-            count+=(min(n,999999999)- 1000000 +1)*2
-        if n>=1000000000:
-            count+=(min(n,999999999999)- 1000000000+1)*3  
-        if n >= 1000000000000:
-            count += (min(n, 999999999999999) - 1000000000000 + 1) * 4
+    def convertToBase7(self, num: int) -> str:
+        b=""
+        if num<0:
+            b="-"
+            num=-num
+        if num==0:
+            return "0"
+        a=""
+        while num>0:
+            digit = num%7
+            a+=str(digit)
+            num//=7
+        a=a[::-1]
+        
+           
 
-        if n >= 1000000000000000:
-             count += 1 * 5
-        return count     
+        return b+a
+            
 
-      
+        
