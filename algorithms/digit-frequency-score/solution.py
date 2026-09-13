@@ -1,9 +1,14 @@
 class Solution:
-    def checkString(self, s: str) -> bool:
-        for i in range(len(s)):
-            if "ba" not in s:
-                return True
+    def digitFrequencyScore(self, n: int) -> int:
+        d={}
+        for ch in str(n):
+            if ch in d:
+                d[ch]+=1
             else:
-                return False    
+                d[ch]=1
 
-        
+        sum=0
+        for key,value in d.items():
+            sum+=int(key)*value
+        return sum        
+                    
