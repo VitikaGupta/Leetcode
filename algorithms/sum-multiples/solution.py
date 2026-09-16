@@ -1,18 +1,12 @@
 class Solution:
-    def differenceOfSum(self, nums: List[int]) -> int:
-        element_sum=0
-        for i in nums:
-            element_sum+=i
+    def sumOfMultiples(self, n: int) -> int:
         l=[]
-        for i in nums:
-            for j in str(i):
-                l.append(int(j))
-        digit_sum=0
-        for k in l:
-            digit_sum+=k
-        a=abs(element_sum-digit_sum)    
-        return a
-
-
+        for i in range(1,n+1):
+            if i%3==0 ==0 or i%5==0 or i%7==0:
+                l.append(i)
+        sum=0
+        for i in l:
+            sum+=i
+        return sum            
 
         
