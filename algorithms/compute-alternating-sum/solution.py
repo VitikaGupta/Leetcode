@@ -1,4 +1,11 @@
 class Solution:
-    def reversePrefix(self, s: str, k: int) -> str:
-        s=s[:k][::-1]+ s[k:]
-        return s
+    def alternatingSum(self, nums: List[int]) -> int:
+        even=0
+        odd=0
+        for i in range(len(nums)):
+            if i%2==0:
+                even+=nums[i]
+            else:
+                odd+=nums[i]
+        a=even-odd
+        return a            
