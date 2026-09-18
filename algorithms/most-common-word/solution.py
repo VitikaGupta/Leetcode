@@ -1,11 +1,26 @@
 class Solution:
-    def alternatingSum(self, nums: List[int]) -> int:
-        even=0
-        odd=0
-        for i in range(len(nums)):
-            if i%2==0:
-                even+=nums[i]
+    import string 
+    def mostCommonWord(self, paragraph: str, banned: list[str]) -> str:
+        
+        for i in string.punctuation:
+            paragraph=paragraph.replace(i," ")
+        paragraph=paragraph.lower()
+        paragraph=paragraph.split()
+
+        
+        d={}
+        for ch in  paragraph :
+            if ch in d:
+                d[ch]+=1
             else:
-                odd+=nums[i]
-        a=even-odd
+                d[ch]=1
+        max_c=0
+        a=""        
+        for key,value in d.items():
+            if key not in banned:
+                if value > max_c:
+                    max_c = value
+                    a=key
         return a            
+
+        
