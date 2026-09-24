@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Language:** MySQL
+**Language:** Python3
 
 ## Problem
 
