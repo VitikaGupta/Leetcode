@@ -1,10 +1,16 @@
 class Solution:
-    def countDigits(self, num: int) -> int:
-        count=0
-        for digit in str(num):
-            digit = int(digit)
-            if num%digit==0:
-                count+=1
-               
-        return count            
+    def reverseParentheses(self, s: str) -> str:
+        stack=[]
+        a=""
+        for ch in s:
+            if ch=='(':
+                stack.append(a)
+                a=""
+            elif ch ==')':
+                a=a[::-1]
+                a=stack.pop()+a
+            else:
+                a+=ch
+        return a    
+
         
