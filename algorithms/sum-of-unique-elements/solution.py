@@ -1,16 +1,18 @@
 class Solution:
-    def reverseParentheses(self, s: str) -> str:
-        stack=[]
-        a=""
-        for ch in s:
-            if ch=='(':
-                stack.append(a)
-                a=""
-            elif ch ==')':
-                a=a[::-1]
-                a=stack.pop()+a
+    def sumOfUnique(self, nums: list[int]) -> int:
+        d={}
+        for ch in nums:
+            if ch in d:
+                d[ch]+=1
             else:
-                a+=ch
-        return a    
+                d[ch]=1
+        l=[]
+        for key,value in d.items():
+            if value==1:
+                l.append(key)
+        sum=0
+        for i in l:
+            sum+=i
+        return sum        
 
         
