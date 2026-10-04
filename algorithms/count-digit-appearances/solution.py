@@ -1,12 +1,11 @@
 class Solution:
-    def removeStars(self, s: str) -> str:
-        stack=[]
-        for ch in s:
-            if ch.isalpha():
-                stack.append(ch)
-            elif ch=="*":
-                stack.pop()
-        a=''.join(stack)
-        return a
+    def countDigitOccurrences(self, nums: list[int], digit: int) -> int:
+        nums=''.join(map(str,nums))
+        digit=str(digit)
+        count = 0
+        for i in nums:
+            if i==digit:
+                count+=1
+        return count
 
         
