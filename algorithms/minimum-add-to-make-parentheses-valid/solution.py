@@ -1,12 +1,14 @@
-class Solution:
-    def mostWordsFound(self, sentences: list[str]) -> int:
-        l=[]
-        for i in sentences:
-            j=i.split()
-            l.append(len(j))
-        max=0
-        for i in l:
-            if i > max :
-                max=i
-        return max
-
+class Solution(object):
+    def minAddToMakeValid(self, s):
+        stack=[]
+        count=0
+        for ch in s:
+            if ch =="(":
+                stack.append(ch)
+            elif stack:
+                stack.pop()
+            else:
+                count+=1
+        count+=len(stack)
+        return count    
+        
