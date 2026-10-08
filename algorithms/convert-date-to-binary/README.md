@@ -1,0 +1,20 @@
+# Convert Date to Binary
+
+**Difficulty:** Easy
+
+**Language:** Python
+
+## Problem
+
+https://leetcode.com/problems/convert-date-to-binary/
+
+## Solution
+
+Automatically synchronized from LeetCode on October 8, 2026.
+
+## Complexity
+
+> Time: Not provided  
+> Space: Not provided
+
+<!-- Add your own complexity analysis above. -->
