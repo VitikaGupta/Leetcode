@@ -1,22 +1,10 @@
 class Solution(object):
-    def maxFreqSum(self, s):
-        d={}
-        for ch in s:
-            if ch in d:
-                d[ch]+=1
-            else:
-                d[ch]=1
-        vowels = "aeiou"        
-        max_vowel =0
-        max_con = 0
-        for key,value in d.items():
-            if key in vowels:
-                max_vowel = max(max_vowel, value)
-            else:
-                max_con = max(max_con , value) 
-        a=(max_vowel+max_con)
-        return a
-       
-
-
+    def convertDateToBinary(self, date):
+        date = date.split('-')
+        a = int(date[0])
+        b = int(date[1])
+        c= int(date[2])
+        d = bin(a)[2:] + '-' + bin(b)[2:] + '-' + bin(c)[2:]
+        return d
+        
         
