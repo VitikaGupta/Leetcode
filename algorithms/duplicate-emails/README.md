@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Language:** Pandas
+**Language:** MySQL
 
 ## Problem
 
