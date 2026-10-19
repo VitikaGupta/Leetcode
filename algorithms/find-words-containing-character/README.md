@@ -2,7 +2,7 @@
 
 **Difficulty:** Easy
 
-**Language:** Python3
+**Language:** Python
 
 ## Problem
 
@@ -10,7 +10,7 @@ https://leetcode.com/problems/find-words-containing-character/
 
 ## Solution
 
-Automatically synchronized from LeetCode on September 22, 2026.
+Automatically synchronized from LeetCode on October 20, 2026.
 
 ## Complexity
 
