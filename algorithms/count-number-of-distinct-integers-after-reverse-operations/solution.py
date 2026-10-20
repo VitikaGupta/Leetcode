@@ -1,8 +1,11 @@
 class Solution(object):
-    def findWordsContaining(self, words, x):
+    def countDistinctIntegers(self, nums):
         l=[]
-        for i in range(len(words)):
-            if x in words[i]:
-                l.append(i)
-        return l
+        for i in range(len(nums)):
+            a=int(str(nums[i])[::-1])
+            l.append(a)
+        b=nums+l
+        c=set(b)
+        return len(c)
+
         
